@@ -34,5 +34,7 @@ public class PlayerInput : MonoBehaviour
         {
             controller.SetCrouch(false);
         }
+
+
     }
 }

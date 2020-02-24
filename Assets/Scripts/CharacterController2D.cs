@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class CharacterController2D : MonoBehaviour
+public class CharacterController2D : GameCharacter
 {
     public static CharacterController2D Instance;
 
