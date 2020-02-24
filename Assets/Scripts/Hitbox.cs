@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Hitbox : MonoBehaviour
 {
+    public float attackStrength;
+
     // Start is called before the first frame update
     void Start()
     {

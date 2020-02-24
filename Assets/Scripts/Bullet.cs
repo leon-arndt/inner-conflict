@@ -16,6 +16,8 @@ public class Bullet : MonoBehaviour
         {
             moveSpeed *= -1f;
         }
+
+        Destroy(gameObject, 4f);
     }
 
     // Update is called once per frame
