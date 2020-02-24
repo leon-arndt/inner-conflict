@@ -13,6 +13,13 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CharacterController2D.Instance.Move(Input.GetAxisRaw("Horizonttal"), false, false);
+        CharacterController2D controller = CharacterController2D.Instance;
+
+        controller.Move(Input.GetAxisRaw("Horizontal"), false, false);
+
+        if (Input.GetAxisRaw("Jump") > 0.1f)
+        {
+            controller.Move(0, false, true);
+        }
     }
 }
