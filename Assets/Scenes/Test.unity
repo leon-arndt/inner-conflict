@@ -472,6 +472,82 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[1].time
+      value: 0.08690767
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[1].value
+      value: 0.68546146
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[2].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[0].inSlope
+      value: -3.6192265
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[0].outSlope
+      value: -3.6192265
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[1].inSlope
+      value: -1.6373751
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[1].outSlope
+      value: -1.6373751
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[2].inSlope
+      value: 0.34447616
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: squashCurve.m_Curve.Array.data[2].outSlope
+      value: 0.34447616
+      objectReference: {fileID: 0}
     - target: {fileID: 4949403400420836169, guid: 796575e48a55693458fbe5d60271607c,
         type: 3}
       propertyPath: m_LocalPosition.x

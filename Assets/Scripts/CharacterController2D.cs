@@ -62,7 +62,11 @@ public class CharacterController2D : MonoBehaviour
             {
                 m_Grounded = true;
                 if (!wasGrounded)
+                {
+                    PlayerAnimation.Instance.PlaySquash();
                     OnLandEvent.Invoke();
+                }
+
             }
         }
     }
