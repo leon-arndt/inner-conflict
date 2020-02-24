@@ -174,7 +174,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -230,8 +230,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767200954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.33, y: -3.52, z: 0}
-  m_LocalScale: {x: 5.177, y: 1, z: 1}
+  m_LocalPosition: {x: -0.422, y: -5.13, z: 0}
+  m_LocalScale: {x: 7.621087, y: 0.533, z: 1}
   m_Children: []
   m_Father: {fileID: 890204596}
   m_RootOrder: 0
@@ -370,7 +370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826859607}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.24, y: 1.56, z: -1.2324219}
+  m_LocalPosition: {x: 4.74, y: 0.31, z: -1.2324219}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -656,15 +656,47 @@ PrefabInstance:
       propertyPath: squashCurve.m_Curve.Array.data[2].outSlope
       value: 0.34447616
       objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: stretchCurve.m_Curve.Array.data[0].inSlope
+      value: 2.8897576
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: stretchCurve.m_Curve.Array.data[0].outSlope
+      value: 2.8897576
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: stretchCurve.m_Curve.Array.data[1].value
+      value: 1.3188845
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: stretchCurve.m_Curve.Array.data[1].inSlope
+      value: 1.2656598
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: stretchCurve.m_Curve.Array.data[1].outSlope
+      value: 1.2656598
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: stretchCurve.m_Curve.Array.data[2].inSlope
+      value: -0.3584381
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: stretchCurve.m_Curve.Array.data[2].outSlope
+      value: -0.3584381
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168823195, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: stretchCurve.m_Curve.Array.data[1].time
+      value: 0.11034991
+      objectReference: {fileID: 0}
     - target: {fileID: 4949403400420836169, guid: 796575e48a55693458fbe5d60271607c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6.26
       objectReference: {fileID: 0}
     - target: {fileID: 4949403400420836169, guid: 796575e48a55693458fbe5d60271607c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.42
       objectReference: {fileID: 0}
     - target: {fileID: 4949403400420836169, guid: 796575e48a55693458fbe5d60271607c,
         type: 3}

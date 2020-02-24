@@ -25,5 +25,10 @@ public class PlayerInput : MonoBehaviour
                 controller.Move(0, false, true);
             }
         }
+
+        if (Input.GetAxisRaw("Vertical") < -0.1f)
+        {
+            controller.Move(0, true, false);
+        }
     }
 }
