@@ -15,14 +15,15 @@ public class PlayerCombat : MonoBehaviour
         Instance = this;
     }
 
-    void CreateBullet()
+    public void CreateBullet()
     {
-
+        GameObject bullet = Instantiate(bulletPrefab);
+        bullet.transform.position = transform.position;
     }
 
     void CreateMelee()
     {
-
+        
     }
 
     public void TakeDamage(float damageToTake)

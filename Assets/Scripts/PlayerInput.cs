@@ -35,6 +35,9 @@ public class PlayerInput : MonoBehaviour
             controller.SetCrouch(false);
         }
 
-
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            PlayerCombat.Instance.CreateBullet();
+        }
     }
 }
