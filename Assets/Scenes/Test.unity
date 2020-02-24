@@ -355,8 +355,9 @@ GameObject:
   - component: {fileID: 2011471115}
   - component: {fileID: 2011471117}
   - component: {fileID: 2011471116}
+  - component: {fileID: 2011471118}
   m_Layer: 0
-  m_Name: Ground (1)
+  m_Name: Killzone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,7 +387,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -452,6 +453,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2011471118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011471114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf5679bb97ae34459be8078d00df305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4952731823893132323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -459,16 +472,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4077371689924528677, guid: 796575e48a55693458fbe5d60271607c,
-        type: 3}
-      propertyPath: m_JumpForce
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077371689924528677, guid: 796575e48a55693458fbe5d60271607c,
-        type: 3}
-      propertyPath: m_MovementSmoothing
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4949403400420836169, guid: 796575e48a55693458fbe5d60271607c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -524,30 +527,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4949403400420836169, guid: 796575e48a55693458fbe5d60271607c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949403400420836169, guid: 796575e48a55693458fbe5d60271607c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949403400420836169, guid: 796575e48a55693458fbe5d60271607c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7339202854020987942, guid: 796575e48a55693458fbe5d60271607c,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7634197047226266618, guid: 796575e48a55693458fbe5d60271607c,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 796575e48a55693458fbe5d60271607c, type: 3}

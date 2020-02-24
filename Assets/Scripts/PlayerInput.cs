@@ -19,7 +19,11 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetAxisRaw("Jump") > 0.1f)
         {
-            controller.Move(0, false, true);
+            if (controller.m_Grounded)
+            {
+                PlayerAnimation.Instance.PlayStretch();
+                controller.Move(0, false, true);
+            }
         }
     }
 }
