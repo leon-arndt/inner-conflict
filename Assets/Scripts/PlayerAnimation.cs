@@ -66,4 +66,16 @@ public class PlayerAnimation : MonoBehaviour
             yield return null;
         }
     }
+
+    public void MakeShort()
+    {
+        Transform target = CharacterController2D.Instance.transform;
+        target.localScale = new Vector3(0.7f, 0.2f, 0.5f);
+    }
+
+    public void ResetHeight()
+    {
+        Transform target = CharacterController2D.Instance.transform;
+        target.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+    }
 }

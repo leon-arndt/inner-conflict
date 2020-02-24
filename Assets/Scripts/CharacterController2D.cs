@@ -7,7 +7,7 @@ public class CharacterController2D : MonoBehaviour
 
     [SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
     [SerializeField] private float m_moveForce = 20f;
-    [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
+    private float m_CrouchSpeed = .5f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
     [SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
     [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
@@ -19,6 +19,8 @@ public class CharacterController2D : MonoBehaviour
     const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+    private bool m_crouching = false;
+
     private Vector3 m_Velocity = Vector3.zero;
     private Vector3 startPos;
 
@@ -73,47 +75,14 @@ public class CharacterController2D : MonoBehaviour
     }
 
 
-    public void Move(float moveInput, bool crouch, bool jump)
+    public void Move(float moveInput, bool jump)
     {
-        // If crouching, check to see if the character can stand up
-        if (!crouch)
+        //reduce speed if crouching
+        if (m_crouching)
         {
-            // If the character has a ceiling preventing them from standing up, keep them crouching
-            if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-            {
-                crouch = true;
-            }
-        }
-
-        // If crouching
-        if (crouch)
-        {
-            if (!m_wasCrouching)
-            {
-                m_wasCrouching = true;
-                OnCrouchEvent.Invoke(true);
-            }
-
-            // Reduce the speed by the crouchSpeed multiplier
             moveInput *= m_CrouchSpeed;
-
-            // Disable one of the colliders when crouching
-            if (m_CrouchDisableCollider != null)
-                m_CrouchDisableCollider.enabled = false;
         }
-        else
-        {
-            // Enable the collider when not crouching
-            if (m_CrouchDisableCollider != null)
-                m_CrouchDisableCollider.enabled = true;
-
-            if (m_wasCrouching)
-            {
-                m_wasCrouching = false;
-                OnCrouchEvent.Invoke(false);
-            }
-        }
-
+        
         // Move the character by finding the target velocity
         Vector3 targetVelocity = new Vector2(moveInput * m_moveForce, m_Rigidbody2D.velocity.y);
         // And then smoothing it out and applying it to the character
@@ -141,6 +110,20 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
+    public void SetCrouch(bool newCrouch)
+    {
+        if (newCrouch == false)
+        {
+            m_crouching = newCrouch;
+            PlayerAnimation.Instance.ResetHeight();
+        }
+
+        if (newCrouch == true && m_Grounded)
+        {
+            m_crouching = newCrouch;
+            PlayerAnimation.Instance.MakeShort();
+        }
+    }
 
     private void Flip()
     {

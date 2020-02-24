@@ -15,20 +15,24 @@ public class PlayerInput : MonoBehaviour
     {
         CharacterController2D controller = CharacterController2D.Instance;
 
-        controller.Move(Input.GetAxisRaw("Horizontal"), false, false);
+        controller.Move(Input.GetAxisRaw("Horizontal"), false);
 
         if (Input.GetAxisRaw("Jump") > 0.1f)
         {
             if (controller.m_Grounded)
             {
                 PlayerAnimation.Instance.PlayStretch();
-                controller.Move(0, false, true);
+                controller.Move(0, true);
             }
         }
 
         if (Input.GetAxisRaw("Vertical") < -0.1f)
         {
-            controller.Move(0, true, false);
+            controller.SetCrouch(true);
+        }
+        else
+        {
+            controller.SetCrouch(false);
         }
     }
 }
