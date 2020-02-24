@@ -8,7 +8,7 @@ public class KillTrigger : MonoBehaviour
     {
         if (collision.GetComponent<CharacterController2D>())
         {
-            CharacterController2D.Instance.ResetPosition();
+            CharacterController2D.Instance.Respawn();
         }
     }
 }

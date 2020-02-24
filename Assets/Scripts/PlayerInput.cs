@@ -39,5 +39,10 @@ public class PlayerInput : MonoBehaviour
         {
             PlayerCombat.Instance.CreateBullet();
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            CharacterController2D.Instance.Respawn();
+        }
     }
 }

@@ -75,6 +75,8 @@ GameObject:
   - component: {fileID: 449450092}
   - component: {fileID: 3404969501584154438}
   - component: {fileID: 1168823195}
+  - component: {fileID: 1886611946330796684}
+  - component: {fileID: 4143048821798707169}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -161,8 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 200
-  m_moveForce: 20
-  m_CrouchSpeed: 0.36
+  m_moveForce: 12
   m_MovementSmoothing: 0
   m_WhatIsGround:
     serializedVersion: 2
@@ -171,6 +172,7 @@ MonoBehaviour:
   m_CeilingCheck: {fileID: 1493868510}
   m_CrouchDisableCollider: {fileID: 0}
   m_Grounded: 0
+  m_FacingRight: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -192,7 +194,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -254,17 +256,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: 0.89770913
-      outSlope: 0.89770913
+      inSlope: 2.8897576
+      outSlope: 2.8897576
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.22938372
-      value: 1.2059199
-      inSlope: 0.3152473
-      outSlope: 0.3152473
+      time: 0.11034991
+      value: 1.3188845
+      inSlope: 1.2656598
+      outSlope: 1.2656598
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -272,8 +274,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: -0.2672145
-      outSlope: -0.2672145
+      inSlope: -0.3584381
+      outSlope: -0.3584381
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -281,3 +283,78 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  squashCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -3.6192265
+      outSlope: -3.6192265
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.08690767
+      value: 0.68546146
+      inSlope: -1.6373751
+      outSlope: -1.6373751
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.34447616
+      outSlope: 0.34447616
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!61 &1886611946330796684
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7339202854020987942}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2}
+  m_EdgeRadius: 0
+--- !u!114 &4143048821798707169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7339202854020987942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6807faab282f10442be490e7ebcad6d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6557965855455906386, guid: f710ab3e2a45a0b48baab68bc19e8f7d,
+    type: 3}
+  meleePrefab: {fileID: 0}
+  m_health: 100

@@ -5,9 +5,15 @@ using UnityEngine;
 //Follow the player
 public class FollowCam : MonoBehaviour
 {
+    public static FollowCam Instance;
     public bool followPlayer = false;
     public float posSmoothTime = 0.2f;
     private Vector3 moveVelocity = Vector3.zero;
+
+    void Start()
+    {
+        Instance = this;
+    }
 
     // Update is called once per frame
     void Update()

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class CharacterController2D : GameCharacter
+public class CharacterController2D : MonoBehaviour
 {
     public static CharacterController2D Instance;
 
@@ -136,8 +136,9 @@ public class CharacterController2D : GameCharacter
         transform.localScale = theScale;
     }
 
-    public void ResetPosition()
+    public void Respawn()
     {
         transform.position = startPos;
+        PlayerCombat.Instance.RecoverFullHealth();
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Minishame : MonoBehaviour
+public class MiniShame : MonoBehaviour
 {
     float activationDelay;
 

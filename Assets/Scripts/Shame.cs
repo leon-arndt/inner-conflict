@@ -25,6 +25,16 @@ public class Shame : GameCharacter
         float normalScale = 2f;
 
         transform.localScale = new Vector3(normalScale, normalScale) * (m_health / m_maxHealth);
+
+        if (m_health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        GameController.Instance.FinishBoss();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

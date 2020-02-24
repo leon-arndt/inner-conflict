@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.rotation = PlayerCombat.Instance.transform.localRotation;   
+        //transform.rotation = PlayerCombat.Instance.transform.localRotation;   
 
         //Flip if player is facing left
         if (!CharacterController2D.Instance.m_FacingRight)
