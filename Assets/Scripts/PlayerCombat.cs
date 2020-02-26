@@ -33,6 +33,8 @@ public class PlayerCombat : GameCharacter
     {
         m_health -= damageToTake;
 
+        UiController.Instance.UpdatePlayerHealth(m_health / m_maxHealth);
+
         if (m_health <= 0)
         {
             CharacterController2D.Instance.Respawn();
@@ -42,6 +44,7 @@ public class PlayerCombat : GameCharacter
     public void RecoverFullHealth()
     {
         m_health = m_maxHealth;
+        UiController.Instance.UpdatePlayerHealth(m_health / m_maxHealth);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
