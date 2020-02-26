@@ -52,6 +52,7 @@ public class UpgradeMenu : MonoBehaviour
         menu.SetActive(false);
         menuActive = false;
 
+
         activeCheckpoint.MakeUnavailable();
         CharacterController2D.Instance.canMove = true;
     }
