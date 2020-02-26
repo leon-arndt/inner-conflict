@@ -7,10 +7,12 @@ public class Checkpoint : MonoBehaviour
     public bool activated;
     public bool available;
 
+    private Color normalColor;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        normalColor = GetComponent<SpriteRenderer>().color;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,9 +25,21 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
+    void MakeAvailable()
+    {
+        GetComponent<SpriteRenderer>().color = normalColor;
+        available = true;
+    }
+
     void Activate()
     {
         activated = true;
-        UpgradeMenu.Instance.Open();
+        UpgradeMenu.Instance.Open(this);
+    }
+
+    public void MakeUnavailable()
+    {
+        available = false;
+        GetComponent<SpriteRenderer>().color = Color.black;
     }
 }

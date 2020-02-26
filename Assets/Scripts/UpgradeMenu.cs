@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UpgradeMenu : MonoBehaviour
 {
+    public bool menuActive;
+    public Checkpoint activeCheckpoint;
     public static UpgradeMenu Instance;
 
     [SerializeField]
@@ -16,9 +18,39 @@ public class UpgradeMenu : MonoBehaviour
         Instance = this;
     }
 
+    private void Update()
+    {
+        if (!menuActive) return;
 
-    public void Open()
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            Close();
+        }
+
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            Close();
+        }
+
+        if (Input.GetKey(KeyCode.Alpha3))
+        {
+            Close();
+        }
+    }
+
+
+    public void Open(Checkpoint checkpoint)
     {
         menu.SetActive(true);
+        menuActive = true;
+        activeCheckpoint = checkpoint;
+    }
+
+    public void Close()
+    {
+        menu.SetActive(false);
+        menuActive = false;
+
+        activeCheckpoint.MakeUnavailable();
     }
 }
