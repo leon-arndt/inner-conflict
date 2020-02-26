@@ -1664,6 +1664,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 502417309, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 502417309, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 502417309, guid: 796575e48a55693458fbe5d60271607c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4949403400420836169, guid: 796575e48a55693458fbe5d60271607c,
         type: 3}
       propertyPath: m_LocalPosition.x

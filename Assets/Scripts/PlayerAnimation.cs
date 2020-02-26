@@ -26,7 +26,10 @@ public class PlayerAnimation : MonoBehaviour
     public IEnumerator Async_Stretch(float duration)
     {
         Transform target = CharacterController2D.Instance.transform;
-        float normalYScale = 0.5f; //TODO set dynamically
+        int direction = System.Convert.ToInt32(CharacterController2D.Instance.m_FacingRight);
+        direction = 2 * direction - 1;
+
+        float normalYScale = direction * 0.5f; //TODO set dynamically
         float normalXScale = 0.5f;
 
         for (float time = 0f; time <= duration; time += Time.deltaTime)
@@ -52,7 +55,10 @@ public class PlayerAnimation : MonoBehaviour
     public IEnumerator Async_Squash(float duration)
     {
         Transform target = CharacterController2D.Instance.transform;
-        float normalYScale = 0.5f; //TODO set dynamically
+        int direction = System.Convert.ToInt32(CharacterController2D.Instance.m_FacingRight);
+        direction = 2 * direction - 1;
+
+        float normalYScale = direction * 0.5f; //TODO set dynamically
         float normalXScale = 0.5f;
 
         for (float time = 0f; time <= duration; time += Time.deltaTime)
@@ -70,12 +76,18 @@ public class PlayerAnimation : MonoBehaviour
     public void MakeShort()
     {
         Transform target = CharacterController2D.Instance.transform;
-        target.localScale = new Vector3(0.7f, 0.2f, 0.5f);
+        int direction = System.Convert.ToInt32(CharacterController2D.Instance.m_FacingRight);
+        direction = 2 * direction - 1;
+
+        target.localScale = new Vector3(direction * 0.7f, 0.2f, 0.5f);
     }
 
     public void ResetHeight()
     {
         Transform target = CharacterController2D.Instance.transform;
-        target.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        int direction = System.Convert.ToInt32(CharacterController2D.Instance.m_FacingRight);
+        direction = 2 * direction - 1;
+
+        target.localScale = new Vector3(direction * 0.5f, 0.5f, 0.5f);
     }
 }
