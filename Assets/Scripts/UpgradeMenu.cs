@@ -15,6 +15,9 @@ public class UpgradeMenu : MonoBehaviour
     [SerializeField]
     Upgrade upgrade1, upgrade2, upgrade3;
 
+    [SerializeField]
+    UiUpgrade uiUpgrade1, uiUpgrade2, uiUpgrade3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,8 +55,15 @@ public class UpgradeMenu : MonoBehaviour
         activeCheckpoint = checkpoint;
         CharacterController2D.Instance.canMove = false;
 
-        //Get new upgrades
+        //Get new upgrades, clean up and make more abstract, less hard coded (array, linked structure pair?)
         upgrade1 = (Upgrade)UpgradeManager.Instance.GetNewUpgrade();
+        uiUpgrade1.UpdateData(upgrade1);
+
+        upgrade2 = (Upgrade)UpgradeManager.Instance.GetNewUpgrade();
+        uiUpgrade2.UpdateData(upgrade2);
+
+        upgrade3 = (Upgrade)UpgradeManager.Instance.GetNewUpgrade();
+        uiUpgrade3.UpdateData(upgrade3);
     }
 
     public void Close()

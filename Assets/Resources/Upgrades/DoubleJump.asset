@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ac4324e6b968247bd67782495a107d, type: 3}
   m_Name: DoubleJump
   m_EditorClassIdentifier: 
-  upgradeName: biggerBullets
+  upgradeName: doubleJump
   upgradeDescription: 
   upgradeTexture: {fileID: 0}
