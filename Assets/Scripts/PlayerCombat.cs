@@ -24,9 +24,12 @@ public class PlayerCombat : GameCharacter
         bullet.GetComponent<Hitbox>().owner = this;
     }
 
-    void CreateMelee()
+    public void CreateMelee()
     {
-        
+        GameObject melee = Instantiate(meleePrefab);
+        melee.transform.SetParent(transform);
+        melee.transform.position = transform.position;
+        melee.GetComponent<Hitbox>().owner = this;
     }
 
     public void TakeDamage(float damageToTake)

@@ -438,5 +438,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6557965855455906386, guid: f710ab3e2a45a0b48baab68bc19e8f7d,
     type: 3}
-  meleePrefab: {fileID: 0}
+  meleePrefab: {fileID: 6557965855455906386, guid: 641d7c6bb2f66e14fb20356596362244,
+    type: 3}
   m_health: 100
