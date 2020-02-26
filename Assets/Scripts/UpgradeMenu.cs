@@ -12,6 +12,9 @@ public class UpgradeMenu : MonoBehaviour
     [SerializeField]
     GameObject menu;
 
+    [SerializeField]
+    Upgrade upgrade1, upgrade2, upgrade3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,16 +27,19 @@ public class UpgradeMenu : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Alpha1))
         {
+            UpgradeManager.Instance.HandleUpgrade(upgrade1);
             Close();
         }
 
         if (Input.GetKey(KeyCode.Alpha2))
         {
+            UpgradeManager.Instance.HandleUpgrade(upgrade2);
             Close();
         }
 
         if (Input.GetKey(KeyCode.Alpha3))
         {
+            UpgradeManager.Instance.HandleUpgrade(upgrade3);
             Close();
         }
     }
@@ -45,6 +51,9 @@ public class UpgradeMenu : MonoBehaviour
         menuActive = true;
         activeCheckpoint = checkpoint;
         CharacterController2D.Instance.canMove = false;
+
+        //Get new upgrades
+        upgrade1 = (Upgrade)UpgradeManager.Instance.GetNewUpgrade();
     }
 
     public void Close()

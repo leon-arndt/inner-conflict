@@ -1013,7 +1013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748dc5fb1f1e3284f96125921ba835a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followPlayer: 0
+  followPlayer: 1
   posSmoothTime: 0.25
 --- !u!20 &519420031
 Camera:
@@ -1247,6 +1247,9 @@ MonoBehaviour:
   menuActive: 0
   activeCheckpoint: {fileID: 0}
   menu: {fileID: 1697804407}
+  upgrade1: {fileID: 0}
+  upgrade2: {fileID: 0}
+  upgrade3: {fileID: 0}
 --- !u!1 &616408052
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,7 +2419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradePool: []
-  unlockedUpgrades: []
+  acquiredUpgrades: []
 --- !u!1 &1181025809
 GameObject:
   m_ObjectHideFlags: 0
@@ -3332,6 +3335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1697804408}
   - component: {fileID: 1697804409}
+  - component: {fileID: 1697804410}
   m_Layer: 5
   m_Name: Upgrade Menu (Keep Disabled)
   m_TagString: Untagged
@@ -3373,6 +3377,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1697804410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697804407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4429a53cb0194da9a08aa5f6cfe26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1747054866
 GameObject:
   m_ObjectHideFlags: 0
@@ -3575,7 +3591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1826859608
 Transform:
   m_ObjectHideFlags: 0
