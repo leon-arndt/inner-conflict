@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
+    public Object[] upgradePool;
     public List<string> unlockedUpgrades;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        upgradePool = Resources.LoadAll("Upgrades", typeof(Upgrade));
+        //Resources.FindObjectsOfTypeAll<Upgrade>();
     }
 
 
@@ -19,5 +21,10 @@ public class UpgradeManager : MonoBehaviour
         {
             //do something
         }
+    }
+
+    void GetNewUpgrades()
+    {
+
     }
 }
