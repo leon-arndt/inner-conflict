@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class CharacterController2D : MonoBehaviour
 {
     public static CharacterController2D Instance;
+    public bool canMove = true;
 
     [SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
     [SerializeField] private float m_moveForce = 20f;

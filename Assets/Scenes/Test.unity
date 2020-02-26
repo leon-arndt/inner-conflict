@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followPlayer: 0
-  posSmoothTime: 0.2
+  posSmoothTime: 0.25
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

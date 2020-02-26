@@ -15,6 +15,8 @@ public class PlayerInput : MonoBehaviour
     {
         CharacterController2D controller = CharacterController2D.Instance;
 
+        if (!controller.canMove) return;
+
         controller.Move(Input.GetAxisRaw("Horizontal"), false);
 
         if (Input.GetAxisRaw("Jump") > 0.1f)

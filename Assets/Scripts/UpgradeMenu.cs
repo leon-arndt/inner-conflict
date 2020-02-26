@@ -44,6 +44,7 @@ public class UpgradeMenu : MonoBehaviour
         menu.SetActive(true);
         menuActive = true;
         activeCheckpoint = checkpoint;
+        CharacterController2D.Instance.canMove = false;
     }
 
     public void Close()
@@ -52,5 +53,6 @@ public class UpgradeMenu : MonoBehaviour
         menuActive = false;
 
         activeCheckpoint.MakeUnavailable();
+        CharacterController2D.Instance.canMove = true;
     }
 }
